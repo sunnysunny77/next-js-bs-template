@@ -1,6 +1,6 @@
 import Anchor from "@/components/anchor";
 
-export default function Page() {
+export default function Home() {
 
   return (
 
