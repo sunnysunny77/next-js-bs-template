@@ -6,7 +6,7 @@ export default function Anchor() {
 
     <>
 
-      <Link href="/" className="btn btn-primary">
+      <Link href="/">
 
         HOME
         
