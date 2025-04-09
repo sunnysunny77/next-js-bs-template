@@ -8,39 +8,39 @@ const poppins = localFont({
   variable: "--font-poppins",
   src: [
     {
-      path: "/fonts/Poppins-Thin.ttf",
+      path: "/styles/fonts/Poppins-Thin.ttf",
       weight: "100",
     },
     {
-      path: "/fonts/Poppins-ExtraLight.ttf",
+      path: "/styles/fonts/Poppins-ExtraLight.ttf",
       weight: "200",
     },
     {
-      path: "/fonts/Poppins-Light.ttf",
+      path: "/styles/fonts/Poppins-Light.ttf",
       weight: "300",
     },
     {
-      path: "/fonts/Poppins-Regular.ttf",
+      path: "/styles/fonts/Poppins-Regular.ttf",
       weight: "400",
     },
     {
-      path: "/fonts/Poppins-Medium.ttf",
+      path: "/styles/fonts/Poppins-Medium.ttf",
       weight: "500",
     },
     {
-      path: "/fonts/Poppins-SemiBold.ttf",
+      path: "/styles/fonts/Poppins-SemiBold.ttf",
       weight: "600",
     },
     {
-      path: "/fonts/Poppins-Bold.ttf",
+      path: "/styles/fonts/Poppins-Bold.ttf",
       weight: "700",
     },
     {
-      path: "/fonts/Poppins-ExtraBold.ttf",
+      path: "/styles/fonts/Poppins-ExtraBold.ttf",
       weight: "800",
     },
     {
-      path: "/fonts/Poppins-Black.ttf",
+      path: "/styles/fonts/Poppins-Black.ttf",
       weight: "900",
     },
   ],
