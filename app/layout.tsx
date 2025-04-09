@@ -1,5 +1,5 @@
 import Bootstrap from "@/components/bootstrap";
-import localFont from 'next/font/local'
+import localFont from "next/font/local";
 import type { Metadata } from "next";
 import "@/styles/app.scss";
 
@@ -51,11 +51,11 @@ export const metadata: Metadata = {
   description: "App",
 };
 
-export default function RootLayout({
+const RootLayout = ({
   children,
 }: {
   children: React.ReactNode,
-}) {
+}) => {
 
   return (
 
@@ -77,3 +77,5 @@ export default function RootLayout({
 
   );
 };
+
+export default RootLayout;

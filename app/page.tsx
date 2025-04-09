@@ -1,14 +1,16 @@
-import Anchor from "@/components/anchor";
+import Carousel from "@/components/carousel";
 
-export default function Home() {
+const Home = () => {
 
   return (
 
     <>
 
-      <Anchor />
+      <Carousel />
 
     </>
 
   );
 };
+
+export default Home;
