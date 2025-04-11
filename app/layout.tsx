@@ -1,6 +1,7 @@
 import Bootstrap from "@/components/bootstrap";
 import localFont from "next/font/local";
 import type { Metadata } from "next";
+import { AppWrapper } from "@/components/context";
 import "@/styles/app.scss";
 
 const poppins = localFont({
@@ -8,39 +9,39 @@ const poppins = localFont({
   variable: "--font-poppins",
   src: [
     {
-      path: "/styles/fonts/Poppins-Thin.ttf",
+      path: "../public/fonts/Poppins-Thin.ttf",
       weight: "100",
     },
     {
-      path: "/styles/fonts/Poppins-ExtraLight.ttf",
+      path: "../public/fonts/Poppins-ExtraLight.ttf",
       weight: "200",
     },
     {
-      path: "/styles/fonts/Poppins-Light.ttf",
+      path: "../public/fonts/Poppins-Light.ttf",
       weight: "300",
     },
     {
-      path: "/styles/fonts/Poppins-Regular.ttf",
+      path: "../public/fonts/Poppins-Regular.ttf",
       weight: "400",
     },
     {
-      path: "/styles/fonts/Poppins-Medium.ttf",
+      path: "../public/fonts/Poppins-Medium.ttf",
       weight: "500",
     },
     {
-      path: "/styles/fonts/Poppins-SemiBold.ttf",
+      path: "../public/fonts/Poppins-SemiBold.ttf",
       weight: "600",
     },
     {
-      path: "/styles/fonts/Poppins-Bold.ttf",
+      path: "../public/fonts/Poppins-Bold.ttf",
       weight: "700",
     },
     {
-      path: "/styles/fonts/Poppins-ExtraBold.ttf",
+      path: "../public/fonts/Poppins-ExtraBold.ttf",
       weight: "800",
     },
     {
-      path: "/styles/fonts/Poppins-Black.ttf",
+      path: "../public/fonts/Poppins-Black.ttf",
       weight: "900",
     },
   ],
@@ -65,11 +66,11 @@ const RootLayout = ({
 
         <Bootstrap />
 
-        <main>
+        <AppWrapper>
           
           {children}
 
-        </main>
+        </AppWrapper>
         
       </body>
 
