@@ -1,6 +1,6 @@
 "use client"
 import { useAppContext } from "@/components/context";
-import Carousel from "@/components/carousel";
+import CarouselSlider from "@/components/carousel-slider";
 
 const Home = () => {
 
@@ -10,7 +10,7 @@ const Home = () => {
 
     <main>
 
-      <Carousel />
+      <CarouselSlider  />
 
     </main>
 

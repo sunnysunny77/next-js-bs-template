@@ -1,4 +1,3 @@
-import Bootstrap from "@/components/bootstrap";
 import localFont from "next/font/local";
 import type { Metadata } from "next";
 import { AppWrapper } from "@/components/context";
@@ -45,7 +44,7 @@ const poppins = localFont({
       weight: "900",
     },
   ],
-})
+});
 
 export const metadata: Metadata = {
   title: "App",
@@ -63,8 +62,6 @@ const RootLayout = ({
     <html lang="en">
 
       <body className={poppins.variable}>
-
-        <Bootstrap />
 
         <AppWrapper>
           

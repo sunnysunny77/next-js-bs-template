@@ -14,7 +14,7 @@
     "next": "latest",
     "react": "latest",
     "react-dom": "latest",
-    "react-bootstrap-icons": "latest",
+    "react-bootstrap-icons": "latest"
   },
   "devDependencies": {
     "@eslint/eslintrc": "latest",

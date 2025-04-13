@@ -2,17 +2,23 @@
 import { useRef, useEffect } from "react";
 import Image from "next/image";
 
-const Carousel = () => {
+const CarouselSlider = () => {
 
     const ref = useRef(null);
 
     useEffect(() => {
-  
-      const carousel = new window.bootstrap.Carousel(ref.current, {
+
+      const sync = async () => {
+
+      const { Carousel } = await import("bootstrap");
+
+      const inst = new Carousel(ref.current, {
         pause: false,
       });
-      carousel.cycle();
-              //<Image src={null} className="d-block w-100" alt="lorm" />
+
+      inst.cycle();
+    }
+    sync();
     }, []);
 
     return (
@@ -46,4 +52,4 @@ const Carousel = () => {
     );
 };
 
-export default Carousel;
+export default CarouselSlider;
