@@ -1,5 +1,6 @@
 "use client"
 import { useRef, useEffect } from "react";
+import Image from "next/image";
 
 const Carousel = () => {
 
@@ -11,17 +12,18 @@ const Carousel = () => {
         pause: false,
       });
       carousel.cycle();
+              //<Image src={null} className="d-block w-100" alt="lorm" />
     }, []);
 
     return (
 
-      <div ref={ref} className="carousel slide col-6 col-md-4 mx-auto mx-xl-0">
+      <div ref={ref} data-bs-ride="carousel" data-bs-pause="false" className="carousel slide col-6 col-md-4 mx-auto mx-xl-0">
 
         <div className="carousel-inner">
 
           <div className="carousel-item active">
 
-            a
+           a
 
           </div>
 
