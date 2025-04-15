@@ -1,14 +1,22 @@
 "use client"
+import { useEffect } from "react";
 import { useAppContext } from "@/components/context";
 import CarouselSlider from "@/components/carousel-slider";
 
 const Home = () => {
 
-  const { scrollingRef, setScrollingRef } = useAppContext();
+  const { varOne, setVarOne } = useAppContext();
+
+  useEffect(() => {
+
+    setVarOne("hello word");
+  }, [setVarOne]);
 
   return (
 
-    <main>
+    <main className="mt-5">
+
+     { varOne }
 
       <CarouselSlider  />
 

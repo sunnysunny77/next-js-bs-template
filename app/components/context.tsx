@@ -9,11 +9,11 @@ export const AppWrapper = ({
   children: React.ReactNode,
 }) => {
 
-  const [scrollingRef, setScrollingRef] = useState(0);
+  const [varOne, setVarOne] = useState("");
 
   return (
 
-    <AppContext.Provider value={{ scrollingRef, setScrollingRef }}>
+    <AppContext.Provider value={{ varOne, setVarOne }}>
 
       {children}
 
