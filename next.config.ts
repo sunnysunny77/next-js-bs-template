@@ -8,8 +8,15 @@ const {
 const nextConfig = {
   reactStrictMode: true,
   sassOptions: {
-    silenceDeprecations: ["import"],
-  }
+    quietDeps: true,
+    silenceDeprecations: [
+      "mixed-decls",
+      "import",
+      "color-functions",
+      "global-builtin",
+      "legacy-js-api"
+    ],
+  },
 };
 
 module.exports = (phase) => {
