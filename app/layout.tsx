@@ -1,7 +1,6 @@
 import localFont from "next/font/local";
 import type { Metadata } from "next";
 import { AppWrapper } from "@/components/context";
-import Register from "@/lib/register";
 import "@/styles/app.scss";
 
 const poppins = localFont({
@@ -65,8 +64,6 @@ const RootLayout = ({
   return (
 
     <html lang="en">
-
-      <Register />
 
       <body className={poppins.variable}>
 
