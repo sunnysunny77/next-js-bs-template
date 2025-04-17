@@ -16,6 +16,7 @@
     "next": "latest",
     "react": "latest",
     "react-dom": "latest",
+    "overlayscrollbars": "latest",
     "react-bootstrap-icons": "latest"
   },
   "devDependencies": {
