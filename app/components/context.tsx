@@ -19,7 +19,7 @@ export const AppWrapper = ({
 
         const bootstrapJs = await import("bootstrap");
         setBootstrap(bootstrapJs);
-      }
+      };
       sync();
     };
   }, [bootstrap]);
