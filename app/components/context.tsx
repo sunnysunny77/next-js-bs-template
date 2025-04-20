@@ -23,13 +23,16 @@ export const AppWrapper = ({
       }
       sync();
     };
+  }, [bootstrap]);
+
+  useEffect(() => {
 
     OverlayScrollbars(document.body, {
 
       scrollbars: {
         theme: "os-theme-body",
     }});
-  }, [bootstrap]);
+  }, []);
 
   return (
 
