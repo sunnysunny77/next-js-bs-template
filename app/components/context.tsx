@@ -1,6 +1,5 @@
 "use client"
 import {createContext, useContext, useState, useEffect} from "react";
-import {OverlayScrollbars} from "overlayscrollbars";
 
 const AppContext = createContext(null);
 
@@ -24,15 +23,6 @@ export const AppWrapper = ({
       sync();
     };
   }, [bootstrap]);
-
-  useEffect(() => {
-
-    OverlayScrollbars(document.body, {
-
-      scrollbars: {
-        theme: "os-theme-body",
-    }});
-  }, []);
 
   return (
 

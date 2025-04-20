@@ -1,6 +1,7 @@
-import localFont from "next/font/local";
 import type {Metadata} from "next";
 import {AppWrapper} from "@/components/context";
+import localFont from "next/font/local";
+import Init from "@/lib/init";
 import "@/styles/app.scss";
 
 const poppins = localFont({
@@ -63,9 +64,9 @@ const RootLayout = ({
 
   return (
 
-    <html lang="en">
+    <html data-overlayscrollbars-initialize lang="en">
 
-      <body data-overlayscrollbars-initialize className={poppins.variable}>
+      <body data-overlayscrollbars-initialize className={`${poppins.variable}`}>
 
         <AppWrapper>
 
@@ -74,6 +75,8 @@ const RootLayout = ({
         </AppWrapper>
         
       </body>
+
+      <Init/>
 
     </html>
 
