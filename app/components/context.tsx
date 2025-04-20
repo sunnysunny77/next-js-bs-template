@@ -1,5 +1,6 @@
 "use client"
-import { createContext, useContext, useState} from "react";
+import {createContext, useContext, useState, useEffect} from "react";
+import {OverlayScrollbars} from "overlayscrollbars";
 
 const AppContext = createContext(null);
 
@@ -9,11 +10,30 @@ export const AppWrapper = ({
   children: React.ReactNode,
 }) => {
 
-  const [varOne, setVarOne] = useState("");
+  const [bootstrap, setBootstrap] = useState(undefined);
+
+  useEffect(() => {
+
+    if(!bootstrap) {
+
+      const sync = async () => {
+
+        const bootstrapJs = await import("bootstrap");
+        setBootstrap(bootstrapJs);
+      }
+      sync();
+    };
+
+    OverlayScrollbars(document.body, {
+
+      scrollbars: {
+        theme: "os-theme-body",
+    }});
+  }, [bootstrap]);
 
   return (
 
-    <AppContext.Provider value={{ varOne, setVarOne }}>
+    <AppContext.Provider value={{bootstrap}}>
 
       {children}
 

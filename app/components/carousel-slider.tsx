@@ -1,55 +1,55 @@
 "use client"
-import { useRef, useEffect } from "react";
+import {useEffect, useRef} from "react";
+import {useAppContext} from "@/components/context";
 //import Image from "next/image";
 
 const CarouselSlider = () => {
 
-    const ref = useRef(null);
+  const {bootstrap} = useAppContext();
 
-    useEffect(() => {
+  const ref = useRef(null);
 
-      const sync = async () => {
+  useEffect(() => {
 
-      const { Carousel } = await import("bootstrap");
+    if (bootstrap) {
 
+      const { Carousel } = bootstrap;
       const inst = new Carousel(ref.current, {
         pause: false,
       });
-
       inst.cycle();
     }
-    sync();
-    }, []);
+  }, [bootstrap]);
 
-    return (
+  return (
 
-      <div ref={ref} data-bs-ride="carousel" data-bs-pause="false" className="carousel slide col-6 col-md-4 mx-auto mx-xl-0">
+    <div ref={ref} data-bs-ride="carousel" data-bs-pause="false" className="carousel slide col-6 col-md-4 mx-auto mx-xl-0">
 
-        <div className="carousel-inner">
+      <div className="carousel-inner">
 
-          <div className="carousel-item active">
+        <div className="carousel-item active">
 
-           a
+          a
 
-          </div>
+        </div>
 
-          <div className="carousel-item">
+        <div className="carousel-item">
 
-            b
+          b
 
-          </div>
+        </div>
 
-          <div className="carousel-item">
+        <div className="carousel-item">
 
-            c
-
-          </div>
+          c
 
         </div>
 
       </div>
-      
-    );
+
+    </div>
+
+  );
 };
 
 export default CarouselSlider;
